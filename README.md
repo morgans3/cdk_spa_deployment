@@ -1,6 +1,6 @@
-# CDK Project for Deploying SPA to a S3 bucket and hosting via Route 53
+# CDK Project for Deploying SPA to a S3 bucket, hosting via Cloudfront, utilising Route 53 and updated via a CI/CD pipeline
 
-Cloud Development Kit project for managing AWS Services for deploying a SPA website from Github.
+Cloud Development Kit project for managing AWS Services for deploying a SPA website from Github. The site will update whenver the GitHub repository branch is updated.
 
 ## Pre-requisites
 
@@ -12,12 +12,12 @@ Cloud Development Kit project for managing AWS Services for deploying a SPA webs
 
 ## Steps to deploy
 
-- After downloading the repo, run the command `npm i` to install the node_modules file
-- In the terminal, run `npm run watch' to watch and compile changes
+- After downloading the repo, run the command `npm i` to install the node_modules folder and libraries
+- In the terminal, run `npm run watch` to watch and compile changes
 - Update lib/microservices.ts file to point to your Github repository and the domain you wish to host the application on
-- Run `cdk bootstrap' to bootstrap your AWS account
+- Run `cdk bootstrap` to bootstrap your AWS account
 - Run `cdk deploy` to deploy all the resources
-- View your website in your browser
+- After a few minutes, view your website in your browser. You can check the progress of the deployment in AWS CodePipeline
 
 ## Useful commands
 
