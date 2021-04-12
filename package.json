@@ -11,8 +11,8 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "aws-cdk": "1.60.0",
-    "@aws-cdk/assert": "1.60.0",
+    "aws-cdk": "1.97.0",
+    "@aws-cdk/assert": "1.97.0",
     "@types/jest": "^26.0.4",
     "@types/node": "10.17.27",
     "jest": "^26.0.4",
@@ -21,16 +21,17 @@
     "typescript": "~3.9.6"
   },
   "dependencies": {
-    "@aws-cdk/aws-codecommit": "^1.77.0",
-    "@aws-cdk/aws-codepipeline": "^1.77.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.77.0",
-    "@aws-cdk/aws-kms": "^1.77.0",
+    "@aws-cdk/aws-cloudfront": "^1.97.0",
+    "@aws-cdk/aws-codecommit": "^1.97.0",
+    "@aws-cdk/aws-codepipeline": "^1.97.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.97.0",
+    "@aws-cdk/aws-kms": "^1.97.0",
     "@aws-cdk/aws-s3-deployment": "^1.97.0",
-    "@aws-cdk/aws-sns": "1.60.0",
-    "@aws-cdk/aws-sns-subscriptions": "1.60.0",
-    "@aws-cdk/aws-sqs": "1.60.0",
-    "@aws-cdk/core": "1.60.0",
-    "@aws-cdk/pipelines": "^1.77.0",
+    "@aws-cdk/aws-sns": "1.97.0",
+    "@aws-cdk/aws-sns-subscriptions": "1.97.0",
+    "@aws-cdk/aws-sqs": "1.97.0",
+    "@aws-cdk/core": "1.97.0",
+    "@aws-cdk/pipelines": "^1.97.0",
     "aws-sdk": "^2.812.0"
   }
 }
