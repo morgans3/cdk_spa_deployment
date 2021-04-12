@@ -2,8 +2,9 @@
 
 export const Applications = [
   {
-    name: "stewartmorganv2.com",
+    name: "stewartmorganv2",
     githubrepo: "https://github.com/morgans3/personal_site.git",
-    domain: "www.stewartmorganv2.com",
+    domainName: "stewartmorganv2.com",
+    siteSubDomain: "www.",
   },
 ];
