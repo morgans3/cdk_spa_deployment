@@ -1,6 +1,6 @@
 # CDK Project for Deploying SPA to a S3 bucket, hosting via Cloudfront, utilising Route 53 and updated via a CI/CD pipeline
 
-Cloud Development Kit project for managing AWS Services for deploying a SPA website from Github. The site will update whenver the GitHub repository branch is updated.
+Cloud Development Kit project for managing AWS Services for deploying SPA websites from Github. The site will update whenver the GitHub repository branch is updated.
 
 ## Pre-requisites
 
@@ -45,4 +45,3 @@ This is typically an issue with connecting to your Github repository. Please ens
 
 - In AWS Secrets Manager, you should have a secret called "github" that has a key/value pair of `{ "oauthToken": "YOURAUTHKEYFROMGITHUB" }`
 - In GitHub, ensure that you have created a key with admin:repo_hook and repo permissions selected. The Personal Access token can be checked here: https://github.com/settings/tokens
-- That your repository has a branch called "main". If your branch is called by another name, change the branch name in the GitHubSourceAction in lib/cdk-stack.ts

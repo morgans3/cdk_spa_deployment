@@ -11,6 +11,7 @@ import codebuild = require("@aws-cdk/aws-codebuild");
 import { StackProps } from "@aws-cdk/core";
 import { Duration } from "@aws-cdk/aws-cloudfront/node_modules/@aws-cdk/core/lib/duration";
 import * as secrets from "@aws-cdk/aws-cloudfront/node_modules/@aws-cdk/core/lib/secret-value";
+import { cleanseBucketName } from "./microservices";
 
 export interface StaticSiteProps extends StackProps {
   domainName: string;
@@ -29,7 +30,7 @@ export class SPAPipelines extends cdk.Stack {
     // Content bucket
     // @ts-ignore
     const siteBucket = new s3.Bucket(this, "SiteBucket", {
-      bucketName: props.application.name + "-bucket",
+      bucketName: cleanseBucketName(props.application.repo + "-" + props.application.name + "-bucket"),
       websiteIndexDocument: "index.html",
       websiteErrorDocument: "index.html",
       publicReadAccess: true,
@@ -116,7 +117,7 @@ export class SPAPipelines extends cdk.Stack {
           actions: [
             new cpactions.GitHubSourceAction({
               actionName: "CodeCommit_Source",
-              branch: "main",
+              branch: props.application.branch,
               output: sourceOutput,
               repo: props.application.repo,
               owner: props.application.owner,

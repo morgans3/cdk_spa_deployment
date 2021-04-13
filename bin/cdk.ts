@@ -9,7 +9,7 @@ const env = { account: _ACCOUNT, region: _AWSREGION };
 
 const app = new cdk.App();
 Applications.forEach((spa) => {
-  new SPAPipelines(app, "SPAPipelines", {
+  new SPAPipelines(app, "SPAPipelines-" + spa.name, {
     env: env,
     domainName: spa.domainName,
     siteSubDomain: spa.siteSubDomain,
